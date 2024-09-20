@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <title>Color dropper</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Welcome to the Color Dropper Tool!</h1>
+        <p class="instructions">
+          <strong>How to Use:</strong>
+        <ol>
+          <li><strong>Upload Your Image:</strong> Click the "Choose file" button to select and upload your image. The image will appear on the canvas.</li>
+          <li><strong>Activate the Dropper:</strong> Click the "Color Dropper" button to enable the color dropper tool. Your cursor will change to a dropper icon.</li>
+          <li><strong>Pick a Color:</strong> Hover over any area of the image with the dropper tool activated. A zoom circle will appear, magnifying the area under the cursor and displaying the color in that region.</li>
+          <li><strong>View the Color:</strong> The color hex code will be shown inside the zoom circle. Click on the area to capture and display the color hex code in the header. The color hex code will be automatically copied to your clipboard.</li>
+          <li><strong>Disable the Dropper:</strong> Click the "Color Dropper" button again to disable the tool and return to the default cursor.</li>
+        </ol>
+        </p>
+        <button id="dropper-btn">
+            <img src="./src/assets/IconColorPicker.svg" alt="Color Dropper" />
+        </button>
+        <span id="color-hex">#FFFFFF</span>
+      </header>
+      <main>
+        <input type="file" id="image-upload" accept="image/*">
+        <canvas id="canvas"></canvas>
+        <div id="dropper-circle"></div>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

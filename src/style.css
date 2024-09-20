@@ -1,0 +1,98 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.instructions {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+input[type="file"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+header {
+  background-color: #f5f5f5;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#dropper-btn {
+  margin-right: 15px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
+
+#color-hex {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  flex-grow: 1;
+  overflow: hidden;
+  height: calc(100vh - 60px);
+}
+
+canvas {
+  border: 1px solid #ddd;
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 60px);
+}
+
+#dropper-circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid transparent;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  z-index: 100;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+#dropper-circle .color-code {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #FFFFFF;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  border-radius: 4px;
+}
+
